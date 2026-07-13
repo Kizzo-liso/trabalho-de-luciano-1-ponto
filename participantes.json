@@ -1,0 +1,23 @@
+{
+    "participantes": [
+        {
+            "id": 1,
+            "nome": "Carlos",
+            "email": "carlos@email.com",
+            "curso": "Agronomia"
+        },
+        {
+            "id": 2,
+            "nome": "Ana",
+            "email": "ana@email.com",
+            "curso": "Informática"
+        },
+        {
+            "id": 3,
+            "nome": "Carlin",
+            "email": "teste@gmail.com",
+            "curso": "putaria"
+        }
+    ],
+    "validate": "true"
+}

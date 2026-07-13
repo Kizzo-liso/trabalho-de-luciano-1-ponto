@@ -1,0 +1,31 @@
+{
+    "oficinas": [
+        {
+            "id": 1,
+            "nome": "Oficina de informática",
+            "instrutor": "João",
+            "carga_horaria": 40,
+            "vagas": 20,
+            "inscritos": []
+        },
+        {
+            "id": 2,
+            "nome": "Oficina de python",
+            "instrutor": "Maria",
+            "carga_horaria": 30,
+            "vagas": 15,
+            "inscritos": []
+        },
+        {
+            "id": 3,
+            "nome": "sexo bolado",
+            "instrutor": "jose",
+            "carga_horaria": 69,
+            "vagas": 10,
+            "inscritos": [
+                3
+            ]
+        }
+    ],
+    "validate": "true"
+}
