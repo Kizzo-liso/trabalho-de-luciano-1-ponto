@@ -151,7 +151,7 @@ def salvar_oficina():
 
 
 # ---------------------------------------------------------------------------
-# OFICINAS: LISTAR
+# OFICINAS: LISTAR   sla
 # ---------------------------------------------------------------------------
 def atualizar_lista_oficinas():
     for widget in frame_lista.winfo_children():
@@ -532,7 +532,5 @@ frame_botoes_inscritos.pack(pady=10)
 tk.Button(frame_botoes_inscritos, text="Voltar", font=("Arial", 12), command=voltar_de_listar_inscritos).grid(row=0, column=0, padx=5)
 
 
-# ---------------------------------------------------------------------------
-# MAINLOOP ÚNICO, NO FINAL
-# ---------------------------------------------------------------------------
+
 tela_principal.mainloop()
