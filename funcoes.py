@@ -158,7 +158,7 @@ def salvar_oficina():
 
 
 # ---------------------------------------------------------------------------
-# OFICINAS: LISTAR   sla
+# OFICINAS: LISTAR   
 # ---------------------------------------------------------------------------
 def atualizar_lista_oficinas():
     for widget in frame_lista.winfo_children():
@@ -366,6 +366,10 @@ tk.Button(frame_botoes, text="Participantes por Oficina", font=("Arial", 12), wi
 # ---------------------------------------------------------------------------
 # TELA CRIAR OFICINA
 # ---------------------------------------------------------------------------
+# Cria a interface responsável pelo cadastro de novas oficinas.
+# Nela são exibidos os campos para preenchimento dos dados e os botões de ação.
+# Também define a aparência e o comportamento da janela.
+# ---------------------------------------------------------------------------
 tela_criar_oficina = tk.Toplevel(tela_principal)
 tela_criar_oficina.title("# Criar Oficina")
 tela_criar_oficina.geometry("400x320")
@@ -407,6 +411,12 @@ tk.Button(frame_botoes_criar, text="Voltar", font=("Arial", 12), command=voltar_
 # ---------------------------------------------------------------------------
 # TELA LISTAR OFICINAS
 # ---------------------------------------------------------------------------
+# Esta tela exibe todas as oficinas cadastradas no sistema.
+# É criado um cabeçalho para organizar as informações em formato de tabela.
+# Os dados das oficinas são inseridos dinamicamente em um Frame.
+# Também é disponibilizado um botão para retornar à tela principal.
+# O layout foi desenvolvido para facilitar a visualização das informações.
+# ---------------------------------------------------------------------------
 tela_listar_oficinas = tk.Toplevel(tela_principal)
 tela_listar_oficinas.title("# Listar Oficinas")
 tela_listar_oficinas.geometry("420x340")
@@ -436,6 +446,12 @@ tk.Button(frame_botoes_listar, text="Voltar", font=("Arial", 12), command=voltar
 
 # ---------------------------------------------------------------------------
 # TELA CADASTRAR PARTICIPANTE
+# ---------------------------------------------------------------------------
+# Esta seção cria a interface para cadastrar novos participantes.
+# O formulário contém os campos de nome, e-mail e curso.
+# Também existe uma área para exibir mensagens de erro ou sucesso.
+# Os botões permitem salvar o cadastro ou retornar ao menu principal.
+# Todos os componentes gráficos são organizados utilizando Frames.
 # ---------------------------------------------------------------------------
 tela_cadastrar_participante = tk.Toplevel(tela_principal)
 tela_cadastrar_participante.title("# Cadastrar Participante")
@@ -474,6 +490,12 @@ tk.Button(frame_botoes_participante, text="Voltar", font=("Arial", 12), command=
 # ---------------------------------------------------------------------------
 # TELA INSCRIÇÃO EM OFICINA
 # ---------------------------------------------------------------------------
+# Esta tela permite realizar a inscrição de participantes em oficinas.
+# São utilizados menus suspensos para selecionar oficina e participante.
+# Após a seleção, o usuário pode confirmar a inscrição pelo botão Inscrever.
+# Também existe uma área destinada às mensagens de validação do processo.
+# O botão Voltar retorna o usuário para a tela principal.
+# ---------------------------------------------------------------------------
 tela_inscricao = tk.Toplevel(tela_principal)
 tela_inscricao.title("# Inscrição em Oficina")
 tela_inscricao.geometry("420x320")
@@ -510,6 +532,12 @@ tk.Button(frame_botoes_inscricao, text="Voltar", font=("Arial", 12), command=vol
 
 # ---------------------------------------------------------------------------
 # TELA PARTICIPANTES INSCRITOS POR OFICINA
+# ---------------------------------------------------------------------------
+# Esta interface permite consultar os participantes inscritos em cada oficina.
+# O usuário seleciona uma oficina e o sistema exibe sua lista de inscritos.
+# As informações são apresentadas dinamicamente em uma área específica.
+# Também é disponibilizado um botão para retornar ao menu principal.
+# A tela facilita a consulta e organização dos participantes cadastrados.
 # ---------------------------------------------------------------------------
 tela_listar_inscritos = tk.Toplevel(tela_principal)
 tela_listar_inscritos.title("# Participantes por Oficina")
