@@ -1,9 +1,23 @@
 import json
+
 import os
+# Importa o módulo "os" (Operating System), que permite ao Python
+# interagir com o sistema operacional.
+# Neste projeto, ele é utilizado para verificar se os arquivos
+# "oficinas.json" e "participantes.json" já existem antes de tentar
+# abri-los. Isso evita erros caso seja a primeira execução do programa,
+# permitindo que o sistema utilize os dados padrão quando os arquivos
+# ainda não foram criados.
+
 import tkinter as tk
 
 ARQUIVO_OFICINAS = "oficinas.json"
 ARQUIVO_PARTICIPANTES = "participantes.json"
+# Constantes que armazenam o nome dos arquivos onde os dados do sistema
+# serão salvos. Utilizar constantes evita repetir o nome dos arquivos em
+# várias partes do código, tornando a manutenção mais simples. Caso seja
+# necessário alterar o nome de um arquivo futuramente, basta modificar
+# apenas esta constante.
 
 
 # ====================================================
