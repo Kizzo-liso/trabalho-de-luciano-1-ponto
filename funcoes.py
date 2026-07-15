@@ -100,9 +100,11 @@ def extrair_id(texto_opcao):
     except (ValueError, IndexError):
         return None
 
-
 # ---------------------------------------------------------------------------
 # NAVEGAÇÃO GENÉRICA
+# Padroniza a troca entre as telas (janelas Toplevel) do sistema, escondendo
+# a tela de origem e exibindo a tela de destino, evitando repetir esse
+# código em cada função de navegação.
 # ---------------------------------------------------------------------------
 def ir_para(tela_origem, tela_destino, on_abrir=None):
     if on_abrir:
@@ -113,7 +115,10 @@ def ir_para(tela_origem, tela_destino, on_abrir=None):
 
 # ---------------------------------------------------------------------------
 # OFICINAS: CRIAR
+# Funções responsáveis por abrir a tela de cadastro de oficinas, validar os
+# dados informados pelo usuário e salvar a nova oficina no sistema.
 # ---------------------------------------------------------------------------
+
 def abrir_tela_criar_oficina():
     label_mensagem_criar.config(text="")
     ir_para(tela_principal, tela_criar_oficina)
@@ -173,6 +178,8 @@ def salvar_oficina():
 
 # ---------------------------------------------------------------------------
 # OFICINAS: LISTAR   
+# Monta dinamicamente a tabela de oficinas cadastradas, exibindo ID, nome,
+# instrutor, carga horária e vagas disponíveis de cada uma.
 # ---------------------------------------------------------------------------
 def atualizar_lista_oficinas():
     for widget in frame_lista.winfo_children():
@@ -207,6 +214,8 @@ def voltar_de_listar():
 
 # ---------------------------------------------------------------------------
 # PARTICIPANTES: CADASTRAR
+# Funções responsáveis por abrir a tela de cadastro de participantes,
+# validar os dados informados e salvar o novo participante no sistema.
 # ---------------------------------------------------------------------------
 def abrir_tela_cadastrar_participante():
     label_mensagem_participante.config(text="")
@@ -255,6 +264,9 @@ def salvar_participante():
 
 # ---------------------------------------------------------------------------
 # INSCRIÇÃO EM OFICINA
+# Funções responsáveis por preparar a tela de inscrição (atualizando os
+# menus de oficinas e participantes) e por efetivar a inscrição, aplicando
+# as regras de negócio: existência dos cadastros, duplicidade e vagas.
 # ---------------------------------------------------------------------------
 def abrir_tela_inscricao():
     label_mensagem_inscricao.config(text="")
@@ -306,6 +318,8 @@ def inscrever_participante():
 
 # ---------------------------------------------------------------------------
 # PARTICIPANTES INSCRITOS POR OFICINA
+# Funções responsáveis por exibir, para a oficina selecionada, a lista de
+# participantes nela inscritos, atualizando a tela conforme a seleção muda.
 # ---------------------------------------------------------------------------
 def atualizar_lista_inscritos(*_):
     for widget in frame_lista_inscritos.winfo_children():
