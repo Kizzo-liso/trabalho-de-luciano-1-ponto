@@ -334,7 +334,13 @@ def voltar_de_listar_inscritos():
 
 
 # ---------------------------------------------------------------------------
-# TELA PRINCIPAL
+# TELA PRINCIPAL 
+# ---------------------------------------------------------------------------
+# Esta seção cria a janela principal do sistema e configura sua aparência.
+# Nela são exibidos o título da aplicação e os botões de acesso às funções.
+# Cada botão direciona o usuário para uma tela específica do sistema.
+# Também são definidos o tamanho, a cor de fundo e o comportamento da janela.
+# Esta é a primeira interface apresentada quando o programa é iniciado.
 # ---------------------------------------------------------------------------
 tela_principal = tk.Tk()
 tela_principal.title("# Sistema de Gerenciamento de Oficinas")
