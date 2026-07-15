@@ -6,9 +6,15 @@ ARQUIVO_OFICINAS = "oficinas.json"
 ARQUIVO_PARTICIPANTES = "participantes.json"
 
 
-# ---------------------------------------------------------------------------
-# CARREGAR / SALVAR DADOS
-# ---------------------------------------------------------------------------
+# ====================================================
+# MÓDULO: CARREGAMENTO E SALVAMENTO DE DADOS
+# Funções:
+#   - carregar_dados()
+#   - salvar_oficinas_no_arquivo()
+#   - salvar_participantes_no_arquivo()
+# Objetivo:
+#   Manter a persistência das informações do sistema.
+# ====================================================
 def carregar_dados(caminho, padrao):
     if os.path.exists(caminho):
         try:
@@ -49,10 +55,11 @@ participantes = carregar_dados(ARQUIVO_PARTICIPANTES, {
     ]
 })
 
-
-# ---------------------------------------------------------------------------
-# HELPERS
-# ---------------------------------------------------------------------------
+# ====================================================
+# FUNÇÕES AUXILIARES (HELPERS)
+# Funções de apoio utilizadas em diferentes partes
+# do sistema para consultas e operações comuns.
+# ====================================================
 def obter_oficina(oficina_id):
     return next((o for o in oficinas["oficinas"] if o["id"] == oficina_id), None)
 
