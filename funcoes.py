@@ -380,7 +380,7 @@ tela_principal.protocol("WM_DELETE_WINDOW", lambda: tela_principal.destroy())
 frame_topo = tk.Frame(tela_principal, bg="lightblue")
 frame_topo.pack(pady=20)
 tk.Label(frame_topo, text="Sistema de Gerenciamento de Oficinas", font=("Arial", 16), bg="lightblue",
-         wraplength=380).pack()
+         wraplength=380).pack() # wraplength define, em pixels, a largura máxima que o texto pode ocupar antes de quebrar para a linha seguinte.
 
 frame_botoes = tk.Frame(tela_principal, bg="lightblue")
 frame_botoes.pack(pady=10)
@@ -409,8 +409,9 @@ tela_criar_oficina.title("# Criar Oficina")
 tela_criar_oficina.geometry("400x320")
 tela_criar_oficina.configure(bg="lightblue")
 tela_criar_oficina.resizable(False, False)
-tela_criar_oficina.protocol("WM_DELETE_WINDOW", voltar_para_principal)
-tela_criar_oficina.withdraw()
+tela_criar_oficina.protocol("WM_DELETE_WINDOW", voltar_para_principal) #.protocol(...): método que permite interceptar "protocolos de janela" do sistema operacional/gerenciador de janelas.
+#Essa linha configura o que acontece quando o usuário tenta fechar a janela tela_criar_oficina clicando no "X" (o botão de fechar padrão do sistema operacional).
+tela_criar_oficina.withdraw()#Esconde a janela, mas mantém tudo em memória (pode reexibir depois)
 
 tk.Label(tela_criar_oficina, text="Criar Oficina", font=("Arial", 16), bg="lightblue").pack(pady=15)
 
